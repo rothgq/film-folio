@@ -1,0 +1,14 @@
+<div>
+   <h1>{{genre.name}}</h1>
+</div>
+<section>
+{{#each movies as |movie| }}
+<div>
+    <div>
+        <h3>
+            <a href="/movie/{{movie.id}}">{{movie.name}}</a>
+        </h3>
+    </div>
+</div>
+{{/each}}
+</section>

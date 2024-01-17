@@ -1,0 +1,24 @@
+<div>
+    <h2>{{User.name}}!!!</h2>
+</div>
+
+{{#if reviews.length}}
+<div class="review-list">
+    <h3>Personal Reviews:</h3>
+    {{#each reviews as |review|}}
+    <div>
+        <div>
+            <h4><a href="/movie/{{review.id}}">{{movie.name}}</a></h4>
+        </div>
+        <div class="col-md-4">
+            <button class="btn" data-id="{{review.id}}">DELETE</button>
+        </div>
+    </div>
+    {{/each}}
+</div>
+{{else}}
+<div>
+    No active reviews from this account.
+</div>
+
+<script src="/js/profile.js"></script>
